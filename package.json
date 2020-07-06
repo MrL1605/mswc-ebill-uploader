@@ -1,0 +1,51 @@
+{
+  "name": "mswc-ebill",
+  "version": "1.1.0",
+  "private": true,
+  "proxy": "http://lalit.mswcebill.com:7111/",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "form-data": "^3.0.0",
+    "multer": "^1.4.2",
+    "node-xlsx": "^0.15.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "xlsx": "0.16.3",
+    "websocket": "^1.0.31",
+    "ws": "^7.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && cp -r build/* src/server/ui",
+    "ext-prod": "webpack --mode development --entry ./src/extension/popup/scripts/index.js --output-filename 'popup-bundle.js' && cp dist/popup-bundle.js src/extension/popup/public && npm run inj",
+    "ext": "webpack --mode development --optimize-minimize false --entry ./src/extension/popup/scripts/index.js --output-filename 'popup-bundle.js' && cp dist/popup-bundle.js src/extension/popup/public && npm run inj",
+    "inj": "webpack --mode development --optimize-minimize false --entry ./src/extension/popup/scripts/mswc_uploader.js --output-filename 'mswc_uploader-bundle.js' && cp dist/mswc_uploader-bundle.js src/extension/popup/public",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "exports-loader": "^1.1.0",
+    "webpack-cli": "^3.3.12"
+  }
+}

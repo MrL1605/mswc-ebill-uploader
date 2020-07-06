@@ -1,0 +1,23 @@
+{
+  "name": "MSWC E-Bill Uploader",
+  "version": "1.0",
+  "description": "Helps in splitting excel into multiple files and upload it one after another",
+  "permissions": [
+    "declarativeContent",
+    "storage",
+    "tabs",
+    "webRequest",
+    "*://*.google.com/",
+    "*://mswcebill.azurewebsites.net/"
+  ],
+  "browser_action": {
+    "default_popup": "popup/index.html",
+    "default_icon": {
+      "128": "popup/public/m.png"
+    }
+  },
+  "icons": {
+    "128": "popup/public/m.png"
+  },
+  "manifest_version": 2
+}
