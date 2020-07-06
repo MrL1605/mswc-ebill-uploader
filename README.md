@@ -5,6 +5,7 @@ Just another one of my personal projects. Not necessarily helpful to almost anyo
 
 ## HOW-TO:
  - Clone this repo.
+ - Run `npm install` and then `npm run ext`
  - Enable Chrome Extensions page and enable developer mode
  - Click on load unpacked and choose `src/extension` directory.
  - Done :tada:

@@ -23,9 +23,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && cp -r build/* src/server/ui",
-    "ext-prod": "webpack --mode development --entry ./src/extension/popup/scripts/index.js --output-filename 'popup-bundle.js' && cp dist/popup-bundle.js src/extension/popup/public && npm run inj",
-    "ext": "webpack --mode development --optimize-minimize false --entry ./src/extension/popup/scripts/index.js --output-filename 'popup-bundle.js' && cp dist/popup-bundle.js src/extension/popup/public && npm run inj",
-    "inj": "webpack --mode development --optimize-minimize false --entry ./src/extension/popup/scripts/mswc_uploader.js --output-filename 'mswc_uploader-bundle.js' && cp dist/mswc_uploader-bundle.js src/extension/popup/public",
+    "ext-prod": "webpack --mode production --entry ./src/extension/popup/scripts/index.js --output-filename 'popup-bundle.js' && cp dist/popup-bundle.js src/extension/popup/public && npm run inj",
+    "ext": "webpack --mode production --optimize-minimize false --entry ./src/extension/popup/scripts/index.js --output-filename 'popup-bundle.js' && cp dist/popup-bundle.js src/extension/popup/public && npm run inj",
+    "inj": "webpack --mode production --optimize-minimize false --entry ./src/extension/popup/scripts/mswc_uploader.js --output-filename 'mswc_uploader-bundle.js' && cp dist/mswc_uploader-bundle.js src/extension/popup/public",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
